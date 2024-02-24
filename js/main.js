@@ -1,6 +1,6 @@
 "use strict";
 const ImageSlider = () => {
-    let images = ['img/bg-1.jpg', 'img/bg-2.jpg', 'img/bg-3.jpg'];
+    let images = ['img/image3.jpg', 'img/image4.jpg'];
     let imageIndex = 0;
     let header = document.querySelector('header');
     setInterval(() => {

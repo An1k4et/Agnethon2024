@@ -330,7 +330,7 @@ figure {
 
 img,
 svg {
-    vertical-align: middle
+    vertical-align: sub
 }
 
 table {
@@ -362,7 +362,7 @@ tr {
 }
 
 label {
-    display: inline-block
+    display: contents
 }
 
 button {
@@ -3232,14 +3232,14 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd
+    /* background-color: #0d6efd; */
+    /* border-color: #0d6efd */
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0b5ed7;
-    border-color: #0a58ca
+    /* background-color: #0b5ed7;
+    border-color: #0a58ca */
 }
 
 .btn-check:focus+.btn-primary,
@@ -5036,21 +5036,21 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-brand {
-    color: rgba(0, 0, 0, .9)
+    color: black
 }
 
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-    color: rgba(0, 0, 0, .9)
+    color: black
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, .55)
+    color: black
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, .7)
+    color: black
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {

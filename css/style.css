@@ -62,7 +62,9 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/bg-2.jpg);
+    background-image: url(../img/image1.jpg);
+    position: relative;
+    overflow: hidden; 
 }
 
 nav a {
@@ -74,16 +76,12 @@ nav a {
     justify-content: center;
     flex-direction: column;
     height: calc(100vh - 70px);
+    position: relative;
+    z-index: 1;
 }
 
 .banner-content h1 {
     font-size: 65px;
-}
-
-@media (max-width: 767px) {
-    .banner-content h1 {
-        font-size: 45px;
-    }
 }
 
 .card {
@@ -159,6 +157,7 @@ nav a {
 }
 
 #tripForm {
+    margin-top: 5px;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -214,19 +213,67 @@ label {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: var(--red);
+    color: white; 
+    padding: 15px 30px;
+    border-radius: 10px; 
+    text-decoration: none; 
+    display: inline-block; 
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #FF6347; 
+}
+
+.btn-primary:focus {
+    outline: none; 
 }
 
 footer {
+    padding-bottom: 0px !important;
     padding: 50px 0;
-    margin-top: 30vh;
+    margin-top: 10vh;
+}
+
+/* Responsiveness */
+
+@media (min-width: 576px) {
+    #tripForm .form-group.date-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    #tripForm .form-group.date-group label,
+    #tripForm .form-group.date-group input {
+        width: 175px;
+        margin-bottom: 0; 
+    }
+
+    #tripForm .form-group.date-group label {
+        text-align:center; 
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-content h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #travelsearchbutton {
+        margin-right: 1000px !important;
+    }
+    #headername {
+        font-size: 80px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #travelsearchbutton {
+        margin-right: 10px !important;
+    }
+    #headername {
+        font-size: 50px;
+    }
 }
