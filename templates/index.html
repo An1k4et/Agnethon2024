@@ -42,6 +42,17 @@
                                 style="font-family: 'Tahoma', sans-serif !important; text-decoration: underline;">Contact
                                 Us</a>
                         </li>
+                        {% if session.logged_in %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout"
+                                style="font-family: 'Tahoma', sans-serif !important; text-decoration: underline;">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login"
+                                style="font-family: 'Tahoma', sans-serif !important; text-decoration: underline;">Login</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
 
@@ -180,7 +191,7 @@
                 <div class="form-group">
                     <label for="tripType">Trip Type</label>
                     <select class="form-control" id="tripType" name="tripType">
-                        <option value="default">Select a Type</option>
+                        <option value="" disabled selected hidden>Select Type</option>
                         <option value="Historical">Historical</option>
                         <option value="Nature">Nature</option>
                         <option value="Beach">Beach</option>
