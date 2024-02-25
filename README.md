@@ -32,7 +32,7 @@ To run the TourMateAI web application locally, follow these steps:
 
 - **User Authentication**: TourMateAI provides a secure user authentication system with login and signup functionalities.
 - **Trained Model Integration**: The application integrates a trained AI model to assist users in planning their travel tours.
-
+- **Dialogflow Chatbot Integration**: TourMateAI now includes a Dialogflow chatbot to enhance user interaction and provide more intuitive tour planning assistance.
 
 
 https://github.com/An1k4et/DataDynamos_TourMateAI/assets/114073266/e43f17af-3089-4274-859c-64904f703a8b
@@ -42,5 +42,5 @@ https://github.com/An1k4et/DataDynamos_TourMateAI/assets/114073266/e43f17af-3089
 
 
 
-- **Dialogflow Chatbot Integration**: TourMateAI now includes a Dialogflow chatbot to enhance user interaction and provide more intuitive tour planning assistance.
+
 
