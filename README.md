@@ -34,4 +34,5 @@ To run the TourMateAI web application locally, follow these steps:
 
 - **Trained Model Integration**: The application integrates a trained AI model to assist users in planning their travel tours.
 
+- **Dialogflow Chatbot Integration**: TourMateAI now includes a Dialogflow chatbot to enhance user interaction and provide more intuitive tour planning assistance.
 
