@@ -115,6 +115,7 @@ def recommend_locations_with_review(place_name, start_date, end_date, type_, bud
     # Extract unique tourist locations, their reviews, and costs
     unique_locations = filtered_df['Tourist Location'].tolist()
     locations_reviews = filtered_df.set_index('Tourist Location')['Review'].to_dict()
+    locations_popularity = filtered_df.set_index('Tourist Location')['Popularity'].to_dict()
     locations_budget = filtered_df.set_index('Tourist Location')['Budget'].to_dict()
     locations_type = filtered_df.set_index('Tourist Location')['Type'].to_dict()
     
@@ -130,23 +131,22 @@ def recommend_locations_with_review(place_name, start_date, end_date, type_, bud
             for location in unique_locations:
                 if remaining_budget >= locations_budget[location]:
                     review = locations_reviews.get(location, '')
-                    sentiment_score = analyze_sentiment(review)
+                    popularity = locations_popularity.get(location, '')
                     trip_type = locations_type[location]
-                    recommendation = f"{location} ({trip_type})"
-                    recommendations.append((recommendation, sentiment_score))
+                    recommendation = {"location": f"{location}", "type": f"{trip_type}", "popularity": popularity, "review": review, "budget": locations_budget[location]}
+                    recommendations.append(recommendation)
                     remaining_budget -= locations_budget[location]
                     unique_locations.remove(location)
                     break
                 else:
                     continue
         else:
-            recommendations.append(("No more locations available", 0))
+            recommendations.append({"location": "No more locations available", "popularity": 0, "review": ""})
     
-    # Sort recommendations based on review scores in descending order
-    recommendations.sort(key=lambda x: x[1], reverse=True)
-    sorted_recommendations = [rec[0] for rec in recommendations]
+    # Sort recommendations based on popularity in descending order
+    recommendations.sort(key=lambda x: x["popularity"], reverse=True)
     
-    return sorted_recommendations, budget - remaining_budget
+    return recommendations, budget - remaining_budget
 
 # Function to save trip details for a specific user to the database
 def save_trip_details(user_id, place_name, start_date, end_date, trip_type, budget):
