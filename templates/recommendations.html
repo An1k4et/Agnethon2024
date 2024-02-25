@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/maplogo.png') }}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Recommended Locations</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            padding: 20px;
         }
 
         h1 {
@@ -31,18 +37,145 @@
             margin-bottom: 5px;
             font-size: 16px;
         }
+
+        .recommendation {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            float: right;
+            margin-left: 20px;
+        }
+
+        .image-container img {
+            max-width: 300px;
+            max-height: 300px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
     </style>
+    <script>
+        async function fetchImages() {
+            // Google Custom Search API endpoint
+            var endpoint = "https://www.googleapis.com/customsearch/v1";
+
+            // Your Google API Key
+            var apiKey = "AIzaSyCi2HCEOtcBh8LREXCWfkr6zA29lR6lMnQ";
+
+            // Your Custom Search Engine ID
+            var cx = "f70fee889ab414055";
+
+            // Retrieve the recommendations
+            var recommendations = document.getElementsByClassName("recommendation");
+            var touristNames = [];
+            for (var i = 0; i < recommendations.length; i++) {
+                var recommendationText = recommendations[i].innerText;
+                var day = "Day " + (i + 1) + ": ";
+                touristNames.push(day + recommendationText);
+            }
+
+            // Clear previous image containers
+            document.getElementById("images").innerHTML = "";
+
+            // Iterate through tourist names and fetch images
+            for (const touristName of touristNames) {
+                // Constructing the API request URL
+                var url = endpoint + "?key=" + apiKey + "&cx=" + cx + "&q=" + touristName + "&searchType=image";
+
+                try {
+                    // Making the API request
+                    const response = await fetch(url);
+                    const data = await response.json();
+
+                    // Displaying the first image result for each tourist name
+                    if (data.items && data.items.length > 0) {
+                        var img = document.createElement("img");
+                        img.src = data.items[0].link;
+                        img.alt = data.items[0].title;
+                        var container = document.createElement("div");
+                        container.className = "image-container";
+                        container.appendChild(img);
+                        document.getElementById("images").appendChild(container);
+                    } else {
+                        console.log("No image found for " + touristName);
+                    }
+                } catch (error) {
+                    console.error("Error fetching images:", error);
+                }
+            }
+        }
+
+        // Automatically fetch images when the page loads
+        window.onload = fetchImages;
+    </script>
 </head>
 
 <body>
-    <h1>Recommended Locations</h1>
-    <p>Number of days planned: {{ recommendations|length }}</p>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container-fluid mx-lg-5">
+                <a class="navbar-brand fs-4" href="#">
+                    <img src="{{ url_for('static', filename='img/maplogo.png') }}" alt="" height="40px">
+                    <span style="color: rgb(20, 13, 13);">TourMate</span><span
+                        style="color: red; font-size: 25px !important;">AI</span>
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav fs-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                style="font-family: 'Tahoma', sans-serif !important; text-decoration: underline;">About
+                                Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                style="font-family: 'Tahoma', sans-serif !important; text-decoration: underline;">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    <h1 style="margin-top: 200px;">Recommended Locations</h1>
     <ul>
         {% for recommendation in recommendations %}
-        <li>Day {{ loop.index }}: {{ recommendation }}</li>
+        <li class="recommendation">{{ recommendation }}</li>
         {% endfor %}
     </ul>
     <p>Total budget in this trip plan: ₹{{ remaining_budget }}</p>
+    <div id="images"></div>
 </body>
 
 </html>
+
+
+
+
+<!-- tourmateai-415411 -->
+<!-- f70fee889ab414055 -->
+<!-- AIzaSyCi2HCEOtcBh8LREXCWfkr6zA29lR6lMnQ -->
