@@ -1,14 +1,14 @@
 User,Place Name,Tourist Location,Budget,Duration,Best Time to Visit,Popularity,Review,Type
 User230,"Agatti Island, Lakshadweep",Agatti Island,1200,4,Winter,High,"""Coral reefs, scuba diving and water sports.""",Adventure
-User1,"Agra, Uttar Pradesh",Taj Mahal,1000,3,Year-round,High,"""Impressive architecture, loved the visit.""",Historical
-User1,"Agra, Uttar Pradesh",Agra Fort,1200,4,Year-round,High,"""Historical marvel, enjoyed exploring.""",Historical
-User1,"Agra, Uttar Pradesh",Fatehpur Sikri,1300,5,Winter,Medium,"""Fascinating historical site, great visit.""",Historical
-User1,"Agra, Uttar Pradesh",Akbar Tomb Sikandra,1100,3,Year-round,High,"""Beautiful tomb, peaceful atmosphere.""",Historical
-User1,"Agra, Uttar Pradesh",Mariam tomb Sikandra,1000,3,Year-round,Medium,"""Serene and well-maintained tomb.""",Historical
-User1,"Agra, Uttar Pradesh",Itimad-ud-Daulah-Tomb,900,2,Year-round,Medium,"""Hidden gem, enjoyed the architecture.""",Historical
-User1,"Agra, Uttar Pradesh",Ram Bagh,800,2,Year-round,Low,"""Quiet garden, good for a stroll.""",Nature
-User1,"Agra, Uttar Pradesh",Mehtab Bagh,900,2,Year-round,Medium,"""Scenic views of the Taj Mahal.""",Nature
-User1,"Agra, Uttar Pradesh",Mausoleum,950,3,Year-round,Medium,"""Rich history, worth a visit.""",Historical
+User1,"Agra",,Taj Mahal,1000,3,Year-round,High,"""Impressive architecture, loved the visit.""",Historical
+User1,"Agra",,Agra Fort,1200,4,Year-round,High,"""Historical marvel, enjoyed exploring.""",Historical
+User1,"Agra",,Fatehpur Sikri,1300,5,Winter,Medium,"""Fascinating historical site, great visit.""",Historical
+User1,"Agra",,Akbar Tomb Sikandra,1100,3,Year-round,High,"""Beautiful tomb, peaceful atmosphere.""",Historical
+User1,"Agra",,Mariam tomb Sikandra,1000,3,Year-round,Medium,"""Serene and well-maintained tomb.""",Historical
+User1,"Agra",,Itimad-ud-Daulah-Tomb,900,2,Year-round,Medium,"""Hidden gem, enjoyed the architecture.""",Historical
+User1,"Agra",,Ram Bagh,800,2,Year-round,Low,"""Quiet garden, good for a stroll.""",Nature
+User1,"Agra",,Mehtab Bagh,900,2,Year-round,Medium,"""Scenic views of the Taj Mahal.""",Nature
+User1,"Agra",,Mausoleum,950,3,Year-round,Medium,"""Rich history, worth a visit.""",Historical
 User214,"Aurangabad, Maharashtra",Ajanta and Ellora Caves,1100,3,Winter,High,"""Ancient rock-cut caves, UNESCO World Heritage.""",Historical
 User227,"Alleppey, Kerala",Alleppey,1000,3,Winter,High,"""Backwaters cruise, serene and scenic.""",Nature
 User218,"Araku Valley, Andhra Pradesh",Araku Valley,1100,3,Winter,High,"""Hill station, coffee plantations.""",Nature
@@ -81,10 +81,10 @@ User200,"Mumbai, Maharashtra","Kolaba Fort, Alibag",800,2,Year-round,Medium,"""S
 User216,"Konark Sun Temple, Odisha",Konark Sun Temple,1000,3,Year-round,High,"""Architectural marvel, sun-inspired design.""",Historical
 User200,"Mumbai, Maharashtra",Kondiote Caves,900,2,Year-round,Medium,"""Hidden caves, interesting exploration.""",Historical
 User214,"Lonavala-Khandala, Maharashtra",Lonavala-Khandala,950,2,Monsoon,Medium,"""Scenic hill station, popular monsoon destination.""",Nature
-User229,"Lotus Temple, Delhi",Lotus Temple,900,2,Year-round,High,"""Bahá'í House of Worship, stunning lotus-shaped structure.""",Spiritual
-User2,"Lucknow, Uttar Pradesh",Site of Sahet mahet,1200,4,Winter,Medium,"""Cultural heritage, enjoyed exploring.""",Historical
-User2,"Lucknow, Uttar Pradesh",Residency Building,1100,3,Winter,Low,"""Historical site, informative visit.""",Historical
-User2,"Lucknow, Uttar Pradesh",Piprahwa & Ganwaria,1400,5,Spring,High,"""Serene surroundings, peaceful experience.""",Nature
+User229,"Lotus Temple, Delhi",Lotus Temple,900,2,Year-round,High,"""Bahï¿½'ï¿½ House of Worship, stunning lotus-shaped structure.""",Spiritual
+User2,"Lucknow",,Site of Sahet mahet,1200,4,Winter,Medium,"""Cultural heritage, enjoyed exploring.""",Historical
+User2,"Lucknow",,Residency Building,1100,3,Winter,Low,"""Historical site, informative visit.""",Historical
+User2,"Lucknow",,Piprahwa & Ganwaria,1400,5,Spring,High,"""Serene surroundings, peaceful experience.""",Nature
 User222,"Magnetic Hill, Leh Ladakh",Magnetic Hill,900,2,Year-round,Medium,"""Optical illusion, magnetic phenomenon.""",Unique
 User213,"Mahabalipuram, Tamil Nadu",Mahabalipuram,900,2,Year-round,Medium,"""Ancient monuments, seaside charm.""",Historical
 User205,"Majuli Island, Assam",Majuli Island,1000,3,Winter,Medium,"""Largest river island, serene surroundings.""",Nature

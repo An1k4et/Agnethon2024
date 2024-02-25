@@ -1,0 +1,171 @@
+DESTINATIONID,Place Name,Tourist Location,Budget,Duration (IN DAYS),Best Time to Visit,Popularity,Review,Type
+1,"Agra","Taj Mahal",1000,3,Year-round,High,"Impressive architecture, loved the visit.",Historical
+2,"Agra","Agra Fort",1200,4,Year-round,High,"Historical marvel, enjoyed exploring.",Historical
+3,"Agra","Fatehpur Sikri",1300,5,Winter,Medium,"Fascinating historical site, great visit.",Historical
+4,"Agra","Akbar Tomb Sikandra",1100,3,Year-round,High,"Beautiful tomb, peaceful atmosphere.",Historical
+5,"Agra","Mariam tomb Sikandra",1000,3,Year-round,Medium,"Serene and well-maintained tomb.",Historical
+6,"Agra","Itimad-ud-Daulah-Tomb",900,2,Year-round,Medium,"Hidden gem, enjoyed the architecture.",Historical
+7,"Agra","Ram Bagh",800,2,Year-round,Low,"Quiet garden, good for a stroll.",Nature
+8,"Agra","Mehtab Bagh",900,2,Year-round,Medium,"Scenic views of the Taj Mahal.",Nature
+9,"Agra","Mausoleum",950,3,Year-round,Medium,"Rich history, worth a visit.",Historical
+10,"Lucknow","Site of Sahet mahet",1200,4,Winter,Medium,"Cultural heritage, enjoyed exploring.",Historical
+11,"Lucknow","Residency Building",1100,3,Winter,Low,"Historical site, informative visit.",Historical
+12,"Lucknow","Piprahwa & Ganwaria",1400,5,Spring,High,"Serene surroundings, peaceful experience.",Nature
+13,"Jhansi","Gupta Temple & Varah Temple",1000,3,Year-round,Medium,"Architectural beauty, peaceful ambiance.",Historical
+14,"Jhansi","Kalinjar Fort",1300,5,Winter,High,"Historical fort, stunning views.",Historical
+15,"Jhansi","Rani Lakshmi Bai Mahal",1100,4,Winter,Medium,"Tribute to a brave queen.",Historical
+16,"Jhansi","Rani Jhansi Fort",1200,4,Winter,Medium,"Rich history, well-preserved fort.",Historical
+17,"Sarnath","Lord Cornwallis Tomb",900,2,Year-round,Low,"Peaceful atmosphere, enjoyed the visit.",Historical
+18,"Sarnath","Old Fort (Shahi Fort), Jaunpur",1000,3,Year-round,Medium,"Historical significance, informative visit.",Historical
+19,"Sarnath","Observatory of Man Singh",1100,3,Year-round,High,"Astronomical marvel, interesting visit.",Historical
+20,"Sarnath","Excavated Remains at Sarnath",950,2,Year-round,Medium,"Archaeological site, well-preserved.",Historical
+21,"Sarnath","Tomb of Lal Khan",850,2,Year-round,Low,"Simple tomb, historical significance.",Historical
+22,"Goa","Baga Beach",800,7,Winter,High,"Fantastic beach vibes, wonderful time.",Beach
+23,"Goa","Anjuna Beach",900,6,Winter,High,"Lively atmosphere, enjoyed the beach party.",Beach
+24,"Goa","Dudhsagar Waterfalls",1200,5,Monsoon,Medium,"Spectacular waterfall, thrilling experience.",Nature
+25,"Kasargod","Bekal Fort",1100,4,Winter,High,"Scenic beauty, enjoyed the historic fort.",Historical
+26,"Kochi","Mattancherry Palace Museum Kochi",1200,3,Year-round,Medium,"Cultural insights, well-maintained museum.",Historical
+27,"Palakkad","Fort, Palakkad, Palakkad",1000,3,Year-round,Medium,"Historical charm, pleasant visit.",Historical
+28,"Kannur","Fort St. Angelo, Kannur",1300,5,Winter,High,"Picturesque fort, breathtaking views.",Historical
+29,"Chennai","Group of Monuments Mamallapuram",900,2,Year-round,High,"Incredible sculptures, learned a lot.",Historical
+30,"Chennai","Gingee Fort, Gingee",1000,3,Winter,Medium,"Impressive fort, enjoyed the trek.",Historical
+31,"Chennai","Saluvankuppam",950,3,Year-round,Medium,"Unique architecture, informative visit.",Historical
+32,"Tiruchirappalli","Fort on Rock, Dindigul",1100,4,Year-round,High,"Stunning views from the fort.",Historical
+33,"Tiruchirappalli","Moovarkoil, Kodumbalur",1200,4,Winter,Medium,"Rich cultural heritage, peaceful surroundings.",Historical
+34,"Tiruchirappalli","Rock-cut Jain Temple",1000,3,Year-round,Medium,"Artistic marvel, spiritual experience.",Historical
+35,"Tiruchirappalli","Tirumalai Nayak's Palace",900,2,Year-round,Low,"Historical palace, moderate experience.",Historical
+36,"Tiruchirappalli","Sittannavasal",950,2,Year-round,Medium,"Ancient cave, interesting inscriptions.",Historical
+37,"Tiruchirappalli","Fort Museum, Thirumayam",850,2,Year-round,Low,"Small museum, gained historical insights.",Historical
+38,"Tiruchirappalli","Fort Vattakottai",900,2,Year-round,Medium,"Well-preserved fort, nice trek.",Historical
+39,"Mumbai","Bhaja Cave Temple & Inscriptions",950,3,Winter,Medium,"Ancient cave, fascinating inscriptions.",Historical
+40,"Mumbai","Raigad Fort",1000,4,Winter,High,"Historical fort, panoramic views.",Historical
+41,"Mumbai","Kolaba Fort, Alibag",800,2,Year-round,Medium,"Seaside fort, serene surroundings.",Historical
+42,"Mumbai","Old Fort, Sholapur",850,2,Year-round,Low,"Less crowded, peaceful visit.",Historical
+43,"Mumbai","Janjira Fort, Murd",1100,3,Winter,Medium,"Sea fort, enjoyed the boat ride.",Historical
+44,"Mumbai","Kondiote Caves",900,2,Year-round,Medium,"Hidden caves, interesting exploration.",Historical
+45,"Khajuraho","Khajuraho",1100,3,Winter,High,"Intricate temple carvings, rich history.",Historical
+46,"Khajuraho","Raneh Falls",900,2,Monsoon,Medium,"Scenic beauty, enjoyed the waterfall.",Nature
+47,"Khajuraho","Pandava Falls and Caves",950,3,Monsoon,Medium,"Picturesque spot, natural beauty.",Nature
+48,"Khajuraho","Ken Ghariyal Sanctuary",1000,3,Winter,Medium,"Unique wildlife experience, enjoyed the safari.",Nature
+49,"Khajuraho","Panna National Park",1200,4,Winter,High,"Rich biodiversity, memorable safari.",Nature
+50,"Khajuraho","Ken Gharial Sanctuary",1000,3,Winter,Medium,"Unique wildlife experience, enjoyed the safari.",Nature
+51,"Khajuraho","Dhubela Museum, Dhubela",850,2,Year-round,Low,"Small museum, informative visit.",Historical
+52,"Khajuraho","Archaeological Museum",900,2,Year-round,Medium,"Insightful artifacts, learned a lot.",Historical
+53,"Varanasi","Banaras Ghats",1000,3,Year-round,High,"Spiritual experience, mesmerizing views.",Spiritual
+54,"Varanasi","Kashi Vishwanath Temple",1200,4,Year-round,High,"Sacred temple, profound visit.",Spiritual
+55,"Varanasi","Sarnath Museum",1100,3,Year-round,Medium,"Historical artifacts, well-curated museum.",Historical
+56,"Varanasi","Dhamek Stupa",1000,3,Year-round,Medium,"Buddhist pilgrimage, peaceful ambiance.",Spiritual
+57,"Varanasi","Ramnagar Fort",900,2,Year-round,Medium,"Historical fort, interesting insights.",Historical
+58,"Varanasi","Assi Ghat",850,2,Year-round,Medium,"Peaceful ghat, serene atmosphere.",Spiritual
+59,"Varanasi","Manikarnika Ghat",900,2,Year-round,High,"Sacred ghat, cultural experience.",Spiritual
+60,"Varanasi","Tulsi Ghat",800,2,Year-round,Low,"Quiet ghat, good for introspection.",Spiritual
+61,"Jaipur","Hawa Mahal",1100,3,Year-round,High,"Iconic landmark, stunning architecture.",Historical
+62,"Jaipur","City Palace",1200,4,Year-round,High,"Historical palace, rich heritage.",Historical
+63,"Jaipur","Amber Fort",1300,5,Year-round,High,"Majestic fort, breathtaking views.",Historical
+64,"Jaipur","Jantar Mantar",1000,3,Year-round,Medium,"Astronomical observatory, interesting visit.",Historical
+65,"Jaipur","Nahargarh Fort",1100,4,Year-round,Medium,"Scenic views, enjoyed the sunset.",Historical
+66,"Jaipur","Albert Hall Museum",900,2,Year-round,Medium,"Cultural artifacts, informative visit.",Historical
+67,"Jaipur","Jaipur Wax Museum",950,3,Year-round,Medium,"Artistic wax statues, fun experience.",Art
+68,"Jaipur","Rambagh Palace",1400,5,Year-round,High,"Luxurious palace, royal experience.",Luxury
+69,"Jaipur","Panna Meena ka Kund",850,2,Year-round,Low,"Historical stepwell, unique architecture.",Historical
+70,"Jaipur","Central Park, Jaipur",800,2,Year-round,Low,"Relaxing park, good for a stroll.",Nature
+71,"Jaisalmer","Jaisalmer Fort",1200,4,Winter,High,"Golden fort, stunning architecture.",Historical
+72,"Jaisalmer","Patwon Ki Haveli",1100,3,Winter,High,"Intricate carvings, rich history.",Historical
+73,"Jaisalmer","Gadisar Lake",1000,3,Year-round,Medium,"Scenic lake, peaceful surroundings.",Nature
+74,"Jaisalmer","Sam Sand Dunes",1300,5,Winter,High,"Desert adventure, enjoyed the camel ride.",Adventure
+75,"Jaisalmer","Kuldhara Abandoned Village",1200,4,Winter,High,"Eerie atmosphere, fascinating history.",Historical
+76,"Jaisalmer","Desert Cultural Centre",950,3,Year-round,Medium,"Insightful cultural displays, learned a lot.",Culture
+77,"Jaisalmer","Bada Bagh",900,2,Year-round,Medium,"Historical site, scenic views.",Historical
+78,"Jaisalmer","Akal Wood Fossil Park",1000,3,Year-round,Medium,"Unique fossil park, interesting exhibits.",Nature
+79,"Jaisalmer","Tanot Mata Temple",850,2,Year-round,Medium,"Sacred temple, spiritual experience.",Spiritual
+80,"Jaisalmer","Mool Sagar",800,2,Year-round,Low,"Peaceful garden, pleasant ambiance.",Nature
+81,"Udaipur","City Palace",1200,4,Year-round,High,"Majestic palace, rich history.",Historical
+82,"Udaipur","Lake Pichola",1100,3,Year-round,High,"Picturesque lake, enjoyed the boat ride.",Nature
+83,"Udaipur","Jag Mandir",1000,3,Year-round,Medium,"Scenic island, serene atmosphere.",Historical
+84,"Udaipur","Sajjangarh Palace",1300,5,Winter,High,"Beautiful palace, panoramic views.",Historical
+85,"Udaipur","Vintage Car Museum",950,3,Year-round,Medium,"Impressive collection, enjoyed the visit.",Museum
+86,"Udaipur","Bagore Ki Haveli",900,2,Year-round,Medium,"Historical haveli, cultural insights.",Historical
+87,"Udaipur","Jagdish Temple",1000,3,Year-round,High,"Sacred temple, intricate architecture.",Spiritual
+88,"Udaipur","Shilpgram",850,2,Year-round,Medium,"Artisan village, enjoyed the crafts.",Culture
+89,"Udaipur","Moti Magri",800,2,Year-round,Low,"Peaceful garden, nice view of the city.",Nature
+90,"Ranthambore","Ranthambore National Park",1400,5,Winter,High,"Thrilling safari, saw tigers.",Nature
+91,"Ranthambore","Ranthambore Fort",1200,4,Year-round,High,"Historical fort, panoramic views.",Historical
+92,"Ranthambore","Padam Talao",1100,3,Year-round,Medium,"Scenic lake, wildlife spotting.",Nature
+93,"Ranthambore","Surwal Lake",1000,3,Year-round,Medium,"Birdwatching, peaceful surroundings.",Nature
+94,"Ranthambore","Raj Bagh Ruins",950,3,Year-round,Medium,"Historical ruins, interesting visit.",Historical
+95,"Ranthambore","Jogi Mahal",900,2,Year-round,Medium,"Historical palace, cultural insights.",Historical
+96,"Ranthambore","Kachida Valley",850,2,Year-round,Medium,"Scenic valley, enjoyed the trek.",Adventure
+97,"Ranthambore","Malik Talao",800,2,Year-round,Low,"Tranquil lake, good for birdwatching.",Nature
+98,"Ranthambore","Dastkar Ranthambore",850,2,Year-round,Low,"Crafts market, bought souvenirs.",Culture
+99,"Ranthambore","Ranthambore School of Art",900,2,Year-round,Low,"Artistic displays, enjoyed the visit.",Culture
+100,"Ranthambore","Wild Dragon Adventure Park",950,3,Year-round,Medium,"Adventure activities, thrilling experience.",Adventure
+101,"Shimla","The Ridge",1000,3,Year-round,High,"Scenic views, enjoyed the stroll.",Nature
+102,"Shimla","Jakhoo Temple",1100,3,Year-round,High,"Sacred temple, panoramic views.",Spiritual
+103,"Shimla","Mall Road",1200,4,Year-round,High,"Shopping hub, bustling atmosphere.",Shopping
+104,"Shimla","Christ Church",950,3,Year-round,Medium,"Historical church, peaceful ambiance.",Spiritual
+105,"Shimla","Kufri",1300,5,Winter,High,"Snow activities, thrilling experience.",Adventure
+106,"Shimla","Himalayan Bird Park",900,2,Year-round,Medium,"Birdwatching, serene surroundings.",Nature
+107,"Shimla","Summer Hill",850,2,Year-round,Low,"Tranquil hill station, relaxed ambiance.",Nature
+108,"Shimla","Tara Devi Temple",800,2,Year-round,Low,"Scenic temple, spiritual experience.",Spiritual
+109,"Shimla","Kali Bari Temple",850,2,Year-round,Low,"Sacred temple, peaceful atmosphere.",Spiritual
+110,"Shimla","Scandal Point",800,2,Year-round,Low,"Historical site, scenic views.",Historical
+111,"Manali","Hadimba Devi Temple",1200,4,Year-round,High,"Sacred temple, peaceful ambiance.",Spiritual
+112,"Manali","Solang Valley",1300,5,Summer,High,"Adventure activities, breathtaking views.",Adventure
+113,"Manali","Rohtang Pass",1500,6,Summer,High,"Snow adventure, enjoyed the scenery.",Adventure
+114,"Manali","Mall Road",1100,3,Year-round,High,"Shopping hub, lively atmosphere.",Shopping
+115,"Manali","Manu Temple",1000,3,Year-round,Medium,"Sacred temple, cultural insights.",Spiritual
+116,"Manali","Nehru Kund",900,2,Year-round,Medium,"Scenic spring, serene surroundings.",Nature
+117,"Manali","Club House",950,3,Year-round,Medium,"Recreational activities, fun experience.",Entertainment
+118,"Manali","Tibetan Monastery",850,2,Year-round,Low,"Cultural site, tranquil ambiance.",Spiritual
+119,"Manali","Gulaba",1000,3,Summer,Medium,"Scenic spot, enjoyed the nature.",Nature
+120,"Manali","Van Vihar",800,2,Year-round,Low,"Picturesque park, good for a stroll.",Nature
+121,"New Delhi","Red Fort",1400,5,Winter,High,"Iconic landmark, enjoyed the historical tour.",Historical
+122,"New Delhi","India Gate",1300,5,Year-round,High,"Patriotic vibes, beautiful architecture.",Historical
+123,"New Delhi","Qutub Minar",1200,4,Year-round,High,"Tallest brick minaret, impressive structure.",Historical
+124,"New Delhi","Lotus Temple",1100,3,Year-round,High,"Bahá'í House of Worship, stunning lotus-shaped structure.",Spiritual
+125,"New Delhi","Humayun's Tomb",1000,3,Year-round,Medium,"Mughal architecture, UNESCO World Heritage Site.",Historical
+126,"New Delhi","Akshardham Temple",950,3,Year-round,Medium,"Spiritual complex, intricate carvings.",Spiritual
+127,"New Delhi","Gurudwara Bangla Sahib",900,2,Year-round,High,"Sacred Sikh shrine, community kitchen.",Spiritual
+128,"New Delhi","National Museum",850,2,Year-round,Medium,"Art and history museum, diverse collections.",Museum
+129,"New Delhi","Chandni Chowk",800,2,Year-round,High,"Old Delhi market, bustling with activity.",Market
+130,"New Delhi","Hauz Khas Village",850,2,Year-round,High,"Bohemian charm, trendy cafes and boutiques.",Urban
+131,"Bengaluru","Bangalore Palace",1400,5,Year-round,High,"Royal residence, architectural splendor.",Historical
+132,"Bengaluru","Cubbon Park",1300,5,Year-round,High,"Lush greenery, serene ambiance.",Park
+133,"Bengaluru","Lalbagh Botanical Garden",1200,4,Year-round,High,"Botanical paradise, vibrant flora.",Park
+134,"Bengaluru","ISKCON Temple",1100,3,Year-round,High,"Hindu temple, spiritual retreat.",Spiritual
+135,"Bengaluru","Vidhana Soudha",1000,3,Year-round,High,"Legislative building, architectural marvel.",Historical
+136,"Bengaluru","Wonderla Amusement Park",950,3,Year-round,High,"Thrilling rides, fun-filled day.",Entertainment
+137,"Bengaluru","Bannerghatta Biological Park",900,2,Year-round,Medium,"Wildlife sanctuary, safari experience.",Wildlife
+138,"Bengaluru","UB City Mall",850,2,Year-round,High,"Luxury shopping, fine dining.",Shopping
+139,"Bengaluru","Art of Living International Center",800,2,Year-round,Medium,"Yoga and meditation center, serene surroundings.",Spiritual
+140,"Bengaluru","Bangalore Fort",850,2,Year-round,Medium,"Historical fort, architectural heritage.",Historical
+141,"Pune","Shaniwar Wada",1400,5,Year-round,High,"Historical fortress, architectural grandeur.",Historical
+142,"Pune","Aga Khan Palace",1300,5,Year-round,High,"Historical landmark, serene gardens.",Historical
+143,"Pune","Sinhagad Fort",1200,4,Year-round,High,"Hill fort, scenic trek.",Historical
+144,"Pune","Raja Dinkar Kelkar Museum",1100,3,Year-round,Medium,"Art and artifact collection, cultural insights.",Museum
+145,"Pune","Dagadusheth Halwai Ganapati Temple",1000,3,Year-round,High,"Hindu temple, spiritual ambiance.",Spiritual
+146,"Pune","Pataleshwar Cave Temple",950,3,Year-round,Medium,"Rock-cut cave temple, architectural marvel.",Historical
+147,"Pune","Osho Ashram",900,2,Year-round,Medium,"Meditation center, tranquil atmosphere.",Spiritual
+148,"Pune","Rajiv Gandhi Zoological Park",850,2,Year-round,Medium,"Zoo and botanical garden, family-friendly.",Wildlife
+149,"Pune","Vetal Tekdi",800,2,Year-round,Medium,"Hilltop park, panoramic views.",Park
+150,"Pune","Shinde Chhatri",850,2,Year-round,Medium,"Memorial hall, architectural beauty.",Historical
+151,"Kolkata","Victoria Memorial",1400,5,Year-round,High,"Historical monument, lush gardens.",Historical
+152,"Kolkata","Howrah Bridge",1300,5,Year-round,High,"Iconic bridge, breathtaking views.",Landmark
+153,"Kolkata","Indian Museum",1200,4,Year-round,High,"Oldest museum in India, diverse exhibits.",Museum
+154,"Kolkata","Dakshineswar Kali Temple",1100,3,Year-round,High,"Hindu temple, spiritual pilgrimage.",Spiritual
+155,"Kolkata","Science City Kolkata",1000,3,Year-round,High,"Science museum, interactive exhibits.",Museum
+156,"Kolkata","Kumartuli",950,3,Year-round,Medium,"Artisan community, traditional craftsmanship.",Cultural
+157,"Kolkata","Kalighat Kali Temple",900,2,Year-round,High,"Hindu temple, spiritual aura.",Spiritual
+158,"Kolkata","Birla Planetarium",850,2,Year-round,Medium,"Astronomical observatory, educational experience.",Museum
+159,"Kolkata","Princep Ghat",800,2,Year-round,Medium,"Riverfront promenade, scenic views.",Landmark
+160,"Kolkata","South Park Street Cemetery",850,2,Year-round,Medium,"Historical cemetery, architectural heritage.",Historical
+161,"Hyderabad","Charminar",1400,5,Year-round,High,"Iconic monument, historical charm.",Historical
+162,"Hyderabad","Golconda Fort",1300,5,Year-round,High,"Historical fort, panoramic views.",Historical
+163,"Hyderabad","Ramoji Film City",1200,4,Year-round,High,"Bollywood experience, film sets and studios.",Entertainment
+164,"Hyderabad","Salar Jung Museum",1100,3,Year-round,High,"Art and artifact collection, diverse exhibits.",Museum
+165,"Hyderabad","Birla Mandir",1000,3,Year-round,High,"Hindu temple, panoramic city views.",Spiritual
+166,"Hyderabad","Hussain Sagar Lake",950,3,Year-round,Medium,"Artificial lake, boating and leisure.",Nature
+167,"Hyderabad","Nehru Zoological Park",900,2,Year-round,Medium,"Zoo and wildlife conservation park.",Wildlife
+168,"Hyderabad","Lumbini Park",850,2,Year-round,Medium,"Urban park, musical fountain show.",Park
+169,"Hyderabad","Qutb Shahi Tombs",800,2,Year-round,Medium,"Historical tombs, architectural elegance.",Historical
+170,"Hyderabad","Snow World",850,2,Year-round,Medium,"Snow-themed amusement park, icy adventures.",Entertainment

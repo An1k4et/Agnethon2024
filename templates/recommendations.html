@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Locations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Recommended Locations</h1>
+    <p>Number of days planned: {{ recommendations|length }}</p>
+    <ul>
+        {% for recommendation in recommendations %}
+        <li>Day {{ loop.index }}: {{ recommendation }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total budget in this trip plan: ₹{{ remaining_budget }}</p>
+</body>
+
+</html>

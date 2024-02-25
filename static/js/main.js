@@ -16,12 +16,11 @@ ImageSlider();
 
 document.addEventListener("DOMContentLoaded", function () {
   const destinationInput = document.getElementById("destinationInput");
-  const destinationSuggestions = document.getElementById(
-    "destinationSuggestions"
-  );
+  const destinationSuggestions = document.getElementById("destinationSuggestions");
   let destinations = [];
   let selectedSuggestion = null;
   let suggestionSelected = false;
+  let isTyping = false;
 
   destinationInput.addEventListener("input", function () {
     const inputValue = this.value.trim().toLowerCase();
@@ -34,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       destination.toLowerCase().includes(inputValue)
     );
     populateSuggestions(filteredDestinations);
+    isTyping = true;
   });
 
   destinationSuggestions.addEventListener("click", function (event) {
@@ -71,10 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   destinationInput.addEventListener("blur", function () {
-    if (!suggestionSelected) {
-      destinationInput.value = ""; // Clear input if suggestion not selected
+    if (!suggestionSelected && !isTyping) {
+      destinationInput.value = ""; // Clear input if suggestion not selected and not typing
     }
     suggestionSelected = false;
+    isTyping = false;
     // Focus on the next input field when the destination input loses focus
     const nextInput = destinationInput.nextElementSibling;
     if (nextInput) {
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  fetch("../static/js/travel_dataset.csv")
+  fetch("../static/js/dataset_rec.csv")
     .then((response) => response.text())
     .then((data) => {
       // Split CSV data into rows
@@ -100,15 +101,13 @@ document.addEventListener("DOMContentLoaded", function () {
           destinations.push(placeName);
         }
       }
-
-      populateSuggestions(destinations);
     })
     .catch((error) => {
       console.error("Error fetching destinations:", error);
     });
 
   function populateSuggestions(suggestions) {
-    if (suggestions.length === 0) {
+    if (suggestions.length === 0 || !isTyping) {
       destinationSuggestions.style.display = "none";
       return;
     }

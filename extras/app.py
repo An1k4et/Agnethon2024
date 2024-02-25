@@ -2,8 +2,8 @@
 # app.py
 
 from flask import Flask, render_template, request
-import data_processing
-import recommendation_system
+import extras.data_processing as data_processing
+import extras.recommendation_system as recommendation_system
 
 app = Flask(__name__)
 

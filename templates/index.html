@@ -164,10 +164,10 @@
             <h1 class="p-0 text-red">Plan Your Next Adventure</h1>
             <p>Get started by filling out the form below:</p>
 
-            <form id="tripForm" method="POST" action="#">
+            <form id="tripForm" method="POST" action="/result">
                 <div class="form-group">
                     <label for="destination">Destination</label>
-                    <input type="text" class="form-control" id="destinationInput" name="destination"
+                    <input type="text" class="form-control" id="destinationInput" name="place_name"
                         placeholder="Enter your Destination" list="destinationSuggestions" autocomplete="off">
                     <div id="destinationSuggestions" class="suggestions"></div>
                 </div>
@@ -181,16 +181,16 @@
                     <label for="tripType">Trip Type</label>
                     <select class="form-control" id="tripType" name="tripType">
                         <option value="default">Select a Type</option>
-                        <option value="historical">Historical</option>
-                        <option value="nature">Nature</option>
-                        <option value="beach">Beach</option>
-                        <option value="adventure">Adventure</option>
-                        <option value="unique">Unique</option>
-                        <option value="wildlife">Wildlife</option>
-                        <option value="city">City</option>
-                        <option value="spiritual">Spiritual</option>
-                        <option value="entertainment">Entertainment</option>
-                        <option value="village">Village</option>
+                        <option value="Historical">Historical</option>
+                        <option value="Nature">Nature</option>
+                        <option value="Beach">Beach</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Unique">Unique</option>
+                        <option value="Wildlife">Wildlife</option>
+                        <option value="City">City</option>
+                        <option value="Spiritual">Spiritual</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Village">Village</option>
                     </select>
                 </div>
                 <div class="form-group">
