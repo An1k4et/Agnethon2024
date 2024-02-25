@@ -14,4 +14,5 @@ How it work:
 3) Start date and End Date
 4) Budget
 
-![image](https://github.com/An1k4et/DataDynamos_TourMateAI/assets/114073266/bad6d4d2-042c-428c-a90e-44e1fc5a8ec6)
+![image](https://github.com/An1k4et/DataDynamos_TourMateAI/assets/114073266/b0460e16-f01c-4ba2-bbdf-d5d18846f8ee)
+
