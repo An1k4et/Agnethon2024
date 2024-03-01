@@ -5,16 +5,21 @@ import os
 import pandas as pd
 from textblob import TextBlob  # TextBlob for sentiment analysis
 from datetime import datetime
+from dotenv import load_dotenv
+from waitress import serve 
+
+load_dotenv()
 
 app = Flask(__name__, static_url_path='/static')
 app.secret_key = os.urandom(24)
 
-df = pd.read_csv('dataset_rec.csv', encoding='latin1')
+df = pd.read_csv('dataset_cities.csv', encoding='latin1')
+
 # MySQL configurations
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'tourmate'
+app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST')
+app.config['MYSQL_USER'] = os.getenv('MYSQL_USER')
+app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD')
+app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
 
 mysql = MySQL(app)
 
@@ -85,17 +90,17 @@ def logout():
     session.clear()
     return redirect('/')
 
-# Sample sentiment analysis function using TextBlob
-def analyze_sentiment(review):
-    blob = TextBlob(review)
+# Sentiment analysis function using TextBlob
+def analyze_sentiment(popularity):
+    blob = TextBlob(popularity)
     sentiment_score = blob.sentiment.polarity
     return sentiment_score
 
 def preprocess_place_name(place_name):
-    # Extract only the first part before ","
     return place_name.split(',')[0].strip()
 
 def recommend_locations_with_review(place_name, start_date, end_date, type_, budget, df):
+
     # Preprocess the place_name
     place_name = preprocess_place_name(place_name)
 
@@ -106,11 +111,6 @@ def recommend_locations_with_review(place_name, start_date, end_date, type_, bud
     
     # Filter DataFrame based on user input
     filtered_df = df[(df['Place Name'] == place_name) & (df['Type'] == type_)]
-    # print("Filtered DataFrame:")
-    # print(filtered_df)
-    
-    # Print unique values in the "Place Name" column for debugging
-    # print(df['Place Name'].unique())
     
     # Extract unique tourist locations, their reviews, and costs
     unique_locations = filtered_df['Tourist Location'].tolist()
@@ -118,34 +118,56 @@ def recommend_locations_with_review(place_name, start_date, end_date, type_, bud
     locations_popularity = filtered_df.set_index('Tourist Location')['Popularity'].to_dict()
     locations_budget = filtered_df.set_index('Tourist Location')['Budget'].to_dict()
     locations_type = filtered_df.set_index('Tourist Location')['Type'].to_dict()
+    locations_state = filtered_df.set_index('Tourist Location')['State'].to_dict()
     
     # Generate recommendation with review scores for each day
     remaining_budget = budget
     recommendations = []
+    no_more_locations_added = False
+    no_more_budget_added = False
+    day_counter = 1 
+
     for i in range(duration):
-        if remaining_budget <= 0:
-            recommendations.append(("No more budget for additional locations", 0))
-            continue
+        if remaining_budget <= 0 and not no_more_budget_added:
+            recommendations.append({"day": day_counter, "location": "No more budget for additional locations", "popularity": 0, "review": "", "sentiment_score": 0})
+            no_more_budget_added = True
         
         if unique_locations:
+            location_added = False
             for location in unique_locations:
                 if remaining_budget >= locations_budget[location]:
                     review = locations_reviews.get(location, '')
+                    sentiment_score = analyze_sentiment(locations_popularity[location]) 
                     popularity = locations_popularity.get(location, '')
                     trip_type = locations_type[location]
-                    recommendation = {"location": f"{location}", "type": f"{trip_type}", "popularity": popularity, "review": review, "budget": locations_budget[location]}
+                    state = locations_state.get(location, 'N/A')
+                    recommendation = {"day": day_counter, "state": state, "location": f"{location}", "type": f"{trip_type}", "popularity": popularity, "review": review, "sentiment_score": sentiment_score, "budget": locations_budget[location]}
                     recommendations.append(recommendation)
                     remaining_budget -= locations_budget[location]
                     unique_locations.remove(location)
+                    location_added = True
                     break
-                else:
-                    continue
+            if not location_added:
+                if not no_more_budget_added:
+                    recommendations.append({"day": day_counter, "location": "No more locations available", "popularity": 0, "review": "", "sentiment_score": 0})
+                    no_more_locations_added = True
+                    break
         else:
-            recommendations.append({"location": "No more locations available", "popularity": 0, "review": ""})
+            if not no_more_locations_added:
+                recommendations.append({"day": day_counter, "location": "No more locations available", "popularity": 0, "review": "", "sentiment_score": 0})
+                no_more_locations_added = True
+
+        if location_added:
+            day_counter += 1
     
-    # Sort recommendations based on popularity in descending order
-    recommendations.sort(key=lambda x: x["popularity"], reverse=True)
-    
+    recommendations.sort(key=lambda x: x.get("sentiment_score", 0), reverse=True)
+
+    day_counter = 1
+
+    for recommendation in recommendations:
+        recommendation["day"] = day_counter
+        day_counter += 1
+
     return recommendations, budget - remaining_budget
 
 # Function to save trip details for a specific user to the database
@@ -158,32 +180,35 @@ def save_trip_details(user_id, place_name, start_date, end_date, trip_type, budg
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     if request.method == 'POST':
-        # Get form data
+
         place_name = request.form['place_name']
         start_date = request.form['startDate']
         end_date = request.form['endDate']
-        
-        # Define the trip_type and budget variables
         trip_type = request.form['tripType']
-        budget = float(request.form['budget'])
+        budget_str = request.form['budget']
+
+        # Check if budget is a valid numerical value
+        try:
+            budget = float(budget_str)
+            if budget < 1000:
+                return 'Budget should be at least ₹1000'
+        except ValueError:
+            return 'Budget should be a numerical value'
         
         # Get user ID from session
         user_id = session.get('user_id')
         
         # Check if user is logged in
         if user_id:
-            # Save trip details for the specific user
+
             save_trip_details(user_id, place_name, start_date, end_date, trip_type, budget)
             
-            # Call recommendation function
             recommendations, remaining_budget = recommend_locations_with_review(place_name, start_date, end_date, trip_type, budget, df)
             
-            # Render template with recommendations
-            return render_template('recommendations.html', recommendations=recommendations, remaining_budget=remaining_budget)
+            return render_template('recommendations.html', sorted_recommendations=recommendations, remaining_budget=remaining_budget)
         else:
-            # Redirect to login if user is not logged in
             return redirect('/login')
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use Waitress to serve the Flask app
+    serve(app, host='0.0.0.0', port=5000)

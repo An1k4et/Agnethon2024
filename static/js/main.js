@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  fetch("../static/js/dataset_rec.csv")
+  fetch("../static/js/dataset_cities.csv")
     .then((response) => response.text())
     .then((data) => {
       // Split CSV data into rows

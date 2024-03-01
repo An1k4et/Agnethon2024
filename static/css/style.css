@@ -28,8 +28,6 @@ body {
     background: var(--red);
 }
 
-
-/* text */
 .text-red {
     color: var(--red);
 }
@@ -42,7 +40,6 @@ body {
     color: var(--yellow);
 }
 
-/* bg */
 .bg-red {
     background: var(--red);
 }
@@ -269,6 +266,7 @@ footer {
         font-size: 80px;
     }
 }
+
 @media only screen and (max-width: 767px) {
     #travelsearchbutton {
         margin-right: 10px !important;
@@ -276,4 +274,12 @@ footer {
     #headername {
         font-size: 50px;
     }
+    #home-button {
+        top: 15px;
+        right: 15px;
+    }
+    .header {
+        margin-top: 40px;
+    }
 }
+

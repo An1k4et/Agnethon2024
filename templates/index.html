@@ -16,7 +16,7 @@
 <body>
 
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger intent="WELCOME" chat-title="TOURMATEAI" agent-id="5a5d288e-0a7b-4cda-bf65-beea61ca5b6c"
+    <df-messenger intent="WELCOME" chat-title="TourMateAI" agent-id="ad89cdcb-4ec4-4300-b970-71e875ecb38e"
         language-code="en"></df-messenger>
 
     <header>
@@ -179,22 +179,22 @@
             <h1 class="p-0 text-red">Plan Your Next Adventure</h1>
             <p>Get started by filling out the form below:</p>
 
-            <form id="tripForm" method="POST" action="/result">
+            <form id="tripForm" method="POST" action="/result" onsubmit="return validateForm()">
                 <div class="form-group">
                     <label for="destination">Destination</label>
                     <input type="text" class="form-control" id="destinationInput" name="place_name"
-                        placeholder="Enter your Destination" list="destinationSuggestions" autocomplete="off">
+                        placeholder="Enter your Destination" list="destinationSuggestions" autocomplete="off" required>
                     <div id="destinationSuggestions" class="suggestions"></div>
                 </div>
                 <div class="form-group date-group">
                     <label for="startDate">Start Date</label>
-                    <input type="date" class="form-control" id="startDate" name="startDate">
+                    <input type="date" class="form-control" id="startDate" name="startDate" required>
                     <label for="endDate">End Date</label>
-                    <input type="date" class="form-control" id="endDate" name="endDate">
+                    <input type="date" class="form-control" id="endDate" name="endDate" required>
                 </div>
                 <div class="form-group">
                     <label for="tripType">Trip Type</label>
-                    <select class="form-control" id="tripType" name="tripType">
+                    <select class="form-control" id="tripType" name="tripType" required>
                         <option value="" disabled selected hidden>Select Type</option>
                         <option value="Historical">Historical</option>
                         <option value="Nature">Nature</option>
@@ -210,7 +210,10 @@
                 </div>
                 <div class="form-group">
                     <label for="budget">Budget</label>
-                    <input type="text" class="form-control" id="budget" name="budget" placeholder="Enter in Rs.">
+                    <input type="text" class="form-control" id="budget" name="budget" placeholder="Enter in Rs."
+                        required>
+                    <small id="budgetValidationMessage" class="form-text text-danger" style="display: none;">Budget
+                        should be a numerical value</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Create Trip</button>
             </form>
@@ -285,6 +288,26 @@
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <script>
+        function validateForm() {
+            var budgetInput = document.getElementById('budget').value;
+            if (!isNaN(budgetInput) && parseFloat(budgetInput) >= 1000) {
+                document.getElementById('budgetValidationMessage').innerText = '';
+                document.getElementById('budgetValidationMessage').style.display = 'none';
+                return true;  // Submit the form
+            } else if (isNaN(budgetInput)) {
+                document.getElementById('budgetValidationMessage').innerText = 'Budget should be a numerical value';
+                document.getElementById('budgetValidationMessage').style.display = 'block';
+                return false;  // Prevent form submission
+            } else {
+                document.getElementById('budgetValidationMessage').innerText = 'Budget should be at least ₹1000';
+                document.getElementById('budgetValidationMessage').style.display = 'block';
+                return false;  // Prevent form submission
+            }
+        }
+    </script>
+
 </body>
 
 </html>

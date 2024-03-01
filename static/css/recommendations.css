@@ -46,7 +46,8 @@ body {
 }
 
 .popularity,
-.review {
+.review,
+.state {
     margin-top: 12px;
     font-size: 16px;
     color: #666;
@@ -82,11 +83,10 @@ body {
     border: 2px solid #28a745;
 }
 
-/* Home button CSS */
 #home-button {
     position: absolute;
-    top: 45px; /* Adjust top position as needed */
-    right: 70px; /* Adjust right position as needed */
+    top: 45px; 
+    right: 70px; 
     background-color: #dc3545;
     color: white;
     padding: 10px 20px;
@@ -98,4 +98,92 @@ body {
 
 #home-button:hover {
     background-color: #c82333;
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.hidden-message p {
+    margin: 0; 
+}
+
+.hidden-message-visible {
+    display: block;
+}
+
+.info-button {
+    background-color: grey;
+    margin-left: 5px;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #0056b3;
+}
+
+#budget-disclaimer-message {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#budget-disclaimer-message h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#budget-disclaimer-message ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#budget-disclaimer-message ul li {
+    margin-bottom: 5px;
+}
+
+#budget-disclaimer-message ul li strong {
+    color: red; 
+}
+
+.day {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dc3545;
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+}
+
+@media only screen and (max-width: 767px) {
+    #travelsearchbutton {
+        margin-right: 10px !important;
+    }
+    #headername {
+        font-size: 50px;
+    }
+    #home-button {
+        top: 15px;
+        right: 15px;
+    }
+    .header {
+        margin-top: 40px;
+    }
 }

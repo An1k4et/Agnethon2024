@@ -40,7 +40,7 @@ body {
     height: 3px;
     width: 28px;
     border-radius: 12px;
-    background: #d9534f; /* Dark orange */
+    background: #d9534f; 
 }
 
 .wrapper form {
@@ -71,7 +71,7 @@ form .input-box select {
 .input-box input:valid,
 .input-box select:focus,
 .input-box select:valid {
-    border-color: #d9534f; /* Dark orange */
+    border-color: #d9534f; 
 }
 
 form .policy {
@@ -90,12 +90,12 @@ form h3 {
     color: #fff;
     letter-spacing: 1px;
     border: none;
-    background: #d9534f; /* Dark orange */
+    background: #d9534f; 
     cursor: pointer;
 }
 
 .input-box.button input:hover {
-    background: #c9302c; /* Darker shade of dark orange */
+    background: #c9302c; 
 }
 
 form .text h3 {
@@ -105,7 +105,7 @@ form .text h3 {
 }
 
 form .text h3 a {
-    color: #d9534f; /* Dark orange */
+    color: #d9534f; 
     text-decoration: none;
 }
 

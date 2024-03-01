@@ -13,8 +13,10 @@ To run the TourMateAI web application locally, follow these steps:
    - TextBlob
    - Pandas
    - Flask-MySQLdb
+   - python-dotenv
+   - waitress
 
-   You can install these packages using pip: pip install Flask textblob pandas Flask-MySQLdb
+   You can install these packages using pip: pip install Flask textblob pandas Flask-MySQLdb python-dotenv waitress
 
 3. Ensure you have a stable network connection for the smooth functioning of the website.
 
@@ -27,6 +29,8 @@ To run the TourMateAI web application locally, follow these steps:
 3. Run the `app.py` file: python app.py
 
 4. Open your web browser and go to `http://127.0.0.1:5000/` to access the TourMateAI web application.
+
+Alternatively, you can also access the application online at [TourMateAI](https://tourmateaiweb.onrender.com/).
 
 ## Features
 
