@@ -127,6 +127,8 @@ def recommend_locations_with_review(place_name, start_date, end_date, type_, bud
     no_more_budget_added = False
     day_counter = 1 
 
+    location_added = False 
+
     for i in range(duration):
         if remaining_budget <= 0 and not no_more_budget_added:
             recommendations.append({"day": day_counter, "location": "No more budget for additional locations", "popularity": 0, "review": "", "sentiment_score": 0})
